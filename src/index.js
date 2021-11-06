@@ -12,7 +12,7 @@ app.get("/", (req, res) => {
   res.send("alive");
 });
 
-app.listen(env.PORT, () => {
+app.listen(env.PORT, async () => {
   console.log(`App running on port ${env.PORT}`);
 
   const client = await setupClient();
