@@ -12,6 +12,7 @@
   "dependencies": {
     "dotenv": "^10.0.0",
     "ethers": "^5.5.1",
+    "express": "^4.17.1",
     "input": "^1.0.1",
     "telegram": "^1.9.6"
   }
