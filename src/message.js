@@ -1,9 +1,15 @@
+import numeral from 'numeral'
+
 function internalFormat(data) {
+
+  const price = numeral(data.price).format('0.00000000')
+  const marketCap = numeral(data.marketCap).format('0,0')
+
   let msg = ""
   msg += `<code>${data.symbol}</code>\n`
-  msg += `<strong>Total Supply</strong>: ${data.totalSupply}\n`
-  msg += `<strong>Price</strong>: ${data.price}\n`
-  msg += `<strong>MarketCap</strong>: ${data.marketCap}\n`
+  // msg += `<strong>Total Supply</strong>: ${data.totalSupply}\n`
+  msg += `<strong>Price</strong>: $${price}\n`
+  msg += `<strong>MarketCap</strong>: $${marketCap}\n`
   msg += `\n`
   return msg
 }
@@ -16,7 +22,6 @@ function internalFormat(data) {
 //   })
 //   return result[0]
 // }
-
 
 export function format(inputs) {
 

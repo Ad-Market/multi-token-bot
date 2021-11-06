@@ -21,6 +21,7 @@ app.listen(env.PORT, async () => {
   setInterval(async () => {
     const latest = await getLatest();
     const message = format(latest);
+    console.log(message)
     await client.sendMessage(env.CHANNEL_NAME, { message });
     console.log("Message sent.");
   }, env.INTERVAL);
